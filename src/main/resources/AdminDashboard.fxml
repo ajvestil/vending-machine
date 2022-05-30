@@ -8,7 +8,7 @@
 
 <Pane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vending.machine.controller.AdminDashboardController">
    <children>
-      <Button fx:id="btnUpdateConfig" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#btnUpdateConfig" prefHeight="25.0" prefWidth="174.0" text="Update Config" visible="false" />
+      <Button fx:id="btnUpdateConfig" layoutX="489.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#btnUpdateConfig" prefHeight="25.0" prefWidth="174.0" text="Update Config" visible="false" />
       <Button fx:id="btnExitPane" layoutX="491.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#btnExitPaneClicked" prefHeight="25.0" prefWidth="174.0" text="EXIT" />
       <TableView fx:id="tableViewProducts" layoutX="14.0" layoutY="10.0" prefHeight="355.0" prefWidth="465.0">
         <columns>

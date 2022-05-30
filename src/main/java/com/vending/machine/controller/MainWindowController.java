@@ -137,15 +137,30 @@ public class MainWindowController implements Initializable {
 	@FXML
 	public void insertMoneyOnButtonClicked() {
 	
-		if(!(textFieldInsertMoney.getText().equals(""))) {
-			uiFunctions.infoBox("Successfuly Inserted Money", null, null);
-			btnInsertMoney.setVisible(false);
-			btnSelectProduct.setVisible(true);
-			textFieldInsertMoney.setVisible(false);
-			textFieldSelectProduct.setVisible(true);
-		}else {
-			uiFunctions.infoBox("Error: Insert your money",null, null);
+		
+		
+
+		try {
+			
+			insertedMoney = Float.parseFloat(textFieldInsertMoney.getText());
+			
+			if(!(textFieldInsertMoney.getText().equals(""))) {
+				uiFunctions.infoBox("Successfuly Inserted Money", null, null);
+				btnInsertMoney.setVisible(false);
+				btnSelectProduct.setVisible(true);
+				textFieldInsertMoney.setVisible(false);
+				textFieldSelectProduct.setVisible(true);
+			}else {
+				uiFunctions.infoBox("Error: Insert your money",null, null);
+			}
+			
+			
+		}catch(java.lang.NumberFormatException e) {
+			uiFunctions.infoBox("Please input a number.", null, null);
 		}
+		
+		
+		
 	}
 	
 	@FXML
@@ -155,9 +170,7 @@ public class MainWindowController implements Initializable {
 		producSelected = textFieldSelectProduct.getText();
 
 		if(!(producSelected.equals(""))) {
-		
-			
-			insertedMoney = Float.parseFloat(textFieldInsertMoney.getText());
+					
 			System.out.println(insertedMoney);
 			
 			

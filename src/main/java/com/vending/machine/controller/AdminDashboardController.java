@@ -118,6 +118,7 @@ public class AdminDashboardController implements Initializable {
         sqlUtil.updateVendingMachineConfig(vendingMachine.getConfig());
         sqlUtil.updateVendingMachineItems(vendingMachine.getItems());
         uiFunctions.reloadTable(tableViewProducts);
+        uiFunctions.infoBox("Successfully updated Vending Machine",null, null);
         
 	}
 	
