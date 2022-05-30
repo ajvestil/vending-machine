@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vending.machine.controller.AdminDashboardController">
+   <children>
+      <Button fx:id="btnUpdateConfig" layoutX="415.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#btnUpdateConfig" prefHeight="25.0" prefWidth="174.0" text="Update Config" visible="false" />
+      <Button fx:id="btnExitPane" layoutX="491.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#btnExitPaneClicked" prefHeight="25.0" prefWidth="174.0" text="EXIT" />
+      <TableView fx:id="tableViewProducts" layoutX="14.0" layoutY="10.0" prefHeight="355.0" prefWidth="465.0">
+        <columns>
+          <TableColumn fx:id="tbColProductName" prefWidth="243.0" text="Product Name" />
+          <TableColumn fx:id="tbColQuantity" minWidth="0.0" prefWidth="110.0" text="Quantity" />
+            <TableColumn fx:id="tbColPrice" prefWidth="111.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelTotalSales" layoutX="14.0" layoutY="363.0" prefHeight="31.0" prefWidth="65.0" text="Total Sales: " />
+      <Label fx:id="lblTotalSales" layoutX="78.0" layoutY="369.0" prefHeight="18.0" prefWidth="330.0" text="0.00" />
+      <Label layoutX="490.0" layoutY="-4.0" prefHeight="54.0" prefWidth="160.0" text="Upload JSON file config" wrapText="true" />
+      <Button layoutX="489.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#btnBrowseJson" prefHeight="25.0" prefWidth="174.0" text="Browse JSON" />
+      <Label fx:id="labelJsonFile" alignment="TOP_LEFT" layoutX="491.0" layoutY="70.0" prefHeight="54.0" prefWidth="174.0" text="File: " wrapText="true" />
+   </children>
+</Pane>
